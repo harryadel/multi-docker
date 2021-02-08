@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -f client/Dockerfile.dev -t harryadel/react-test  .
+  - docker build -f client/Dockerfile.dev -t harryadel/react-test ./client
 
 script:
   - docker run harryadel/react-test npm test -- --coverage
